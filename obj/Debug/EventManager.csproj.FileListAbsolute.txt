@@ -114,3 +114,5 @@ C:\Users\Mark\source\repos\EventManager\EventManager\bin\Microsoft.VisualStudio.
 C:\Users\Mark\source\repos\EventManager\EventManager\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\Mark\source\repos\EventManager\EventManager\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\Mark\source\repos\EventManager\EventManager\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.UserModelValidations.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.csproj.GenerateResource.cache
