@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -15,11 +17,21 @@ namespace EventManager.Models
         [StringLength(50)]
         public string Name { get; set; }
 
+        public ApplicationUser()
+        {
+            this.Events = new HashSet<Event>();
+        }
+
+        public virtual ICollection<Event> Events { get; set; }
+
+        public virtual ICollection<Registration> Registrations { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
+            userIdentity.AddClaim(new Claim("Name", Name));
             return userIdentity;
         }
     }
@@ -34,6 +46,27 @@ namespace EventManager.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        public System.Data.Entity.DbSet<EventManager.Models.Event> Events { get; set; }
+    }
+
+    public static class UserClaimsExtention
+    {
+        public static string GetName(this IPrincipal user)
+        {
+            if (user.Identity.IsAuthenticated)
+            {
+                var claimsIdentity = user.Identity as ClaimsIdentity;
+                foreach (var claim in claimsIdentity.Claims)
+                {
+                    if (claim.Type == "Name")
+                    {
+                        return claim.Value;
+                    }
+                }
+            }
+            return "";
         }
     }
 }

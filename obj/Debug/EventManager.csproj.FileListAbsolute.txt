@@ -119,3 +119,14 @@ C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.cspr
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.UserModelValidationsMore.resources
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.redoUserModel.resources
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.UpdatingApplicationUser.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.AddEventModel.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.AddEventModelV2.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.AddEventModelV3.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.AddEventModelV4.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.AddEventModelV5.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.Relationships.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.Relationshipsv2.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.Relationshipsv3.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.Relationshipsv4.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.RegistrationModel.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.RegistrationModelv2.resources

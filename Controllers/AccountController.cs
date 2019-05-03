@@ -147,7 +147,7 @@ namespace EventManager.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register([Bind(Include = "Name, Email, Password")] RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Include = "Name, Email, Password, ConfirmPassword")] RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -165,7 +165,7 @@ namespace EventManager.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
-                AddErrors(result);
+                ModelState.AddModelError("", String.Format("The email address {0} is associated with an existing user account.", model.Email));
             }
 
             // If we got this far, something failed, redisplay form
