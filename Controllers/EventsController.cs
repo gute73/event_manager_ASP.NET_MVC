@@ -30,7 +30,7 @@ namespace EventManager.Controllers
         // GET: Events
         public ActionResult Index()
         {
-            return View(db.Events.ToList());
+            return View(db.Events.OrderByDescending(e => e.EventDate).ThenByDescending(e => e.EventTime).ToList());
         }
 
         // GET: Events/Details/5

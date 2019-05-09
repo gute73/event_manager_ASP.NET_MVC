@@ -52,6 +52,8 @@ namespace EventManager.Controllers
             }
         }
 
+
+
         //
         // GET: /Account/Login
         [AllowAnonymous]

@@ -130,3 +130,7 @@ C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migr
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.Relationshipsv4.resources
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.RegistrationModel.resources
 C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.RegistrationModelv2.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.ContextForRegistration.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.ChangedEventModel.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.ChangedEventModelAgain.resources
+C:\Users\Mark\source\repos\EventManager\EventManager\obj\Debug\EventManager.Migrations.ChangedEventModel3.resources

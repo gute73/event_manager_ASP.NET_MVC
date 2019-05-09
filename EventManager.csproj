@@ -243,6 +243,22 @@
     <Compile Include="Migrations\201905031843306_RegistrationModelv2.Designer.cs">
       <DependentUpon>201905031843306_RegistrationModelv2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905032114007_ContextForRegistration.cs" />
+    <Compile Include="Migrations\201905032114007_ContextForRegistration.Designer.cs">
+      <DependentUpon>201905032114007_ContextForRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905061452294_ChangedEventModel.cs" />
+    <Compile Include="Migrations\201905061452294_ChangedEventModel.Designer.cs">
+      <DependentUpon>201905061452294_ChangedEventModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905061456591_ChangedEventModelAgain.cs" />
+    <Compile Include="Migrations\201905061456591_ChangedEventModelAgain.Designer.cs">
+      <DependentUpon>201905061456591_ChangedEventModelAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905061551114_ChangedEventModel3.cs" />
+    <Compile Include="Migrations\201905061551114_ChangedEventModel3.Designer.cs">
+      <DependentUpon>201905061551114_ChangedEventModel3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -363,10 +379,8 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Events\Create.cshtml" />
-    <Content Include="Views\Events\Delete.cshtml" />
     <Content Include="Views\Events\Details.cshtml" />
     <Content Include="Views\Events\Edit.cshtml" />
-    <Content Include="Views\Events\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -424,6 +438,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905031843306_RegistrationModelv2.resx">
       <DependentUpon>201905031843306_RegistrationModelv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905032114007_ContextForRegistration.resx">
+      <DependentUpon>201905032114007_ContextForRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905061452294_ChangedEventModel.resx">
+      <DependentUpon>201905061452294_ChangedEventModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905061456591_ChangedEventModelAgain.resx">
+      <DependentUpon>201905061456591_ChangedEventModelAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905061551114_ChangedEventModel3.resx">
+      <DependentUpon>201905061551114_ChangedEventModel3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

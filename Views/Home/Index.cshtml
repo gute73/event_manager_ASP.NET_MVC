@@ -1,9 +1,81 @@
-﻿@{
+﻿@model IEnumerable<EventManager.Models.Event>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<h1 class='center'>Upcoming Events</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class='create-event'>
+        @Html.ActionLink("Create an event", "Create", "Events")
+    </div>
+}
+<br>
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                
+                @if (User.Identity.IsAuthenticated && item.ApplicationUser.CreatedByCurrentUser())
+                {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Events", new { id = item.EventID }, null) |
+                    @Html.ActionLink("Details", "Details", "Events", new { id = item.EventID }, null) |
+                    @Html.ActionLink("Delete", "Delete", "Events", new { id = item.EventID }, null)
+                </td>
+                }
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+<br>
+<p class='no-events'>No upcoming events!</p>
+}

@@ -34,7 +34,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EventDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EventDate, new { htmlAttributes = new { @id = "textDate", @class = "form-control" } })
+                @Html.EditorFor(model => model.EventDate, new { autocomplete="off", htmlAttributes = new { @id = "textDate", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EventDate, "", new { @class = "text-danger" })
             </div>
         </div>
